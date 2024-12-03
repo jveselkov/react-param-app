@@ -43,7 +43,8 @@ export const ParamEditor = forwardRef<ParamEditorRef, ParamEditorProps>(
           <div key={`input-param-${index}`}>
             <label>{paramsById[value.paramId].name}</label>
             <input
-              type={getInputType(paramsById[value.paramId].type)}
+              type="text"
+              //type={getInputType(paramsById[value.paramId].type)}
               value={value.value}
               onChange={handleChange(index)}
             />
