@@ -12,11 +12,13 @@ export interface Model {
   paramValues: ParamValue[];
 }
 
-export interface Props {
+export interface ParamEditorProps {
   params: Param[];
   model: Model;
+
+  onChange: (value: Model) => void;
 }
 
-// class ParamEditor extends React.Component<Props, State> {
-//   public getModel(): Model {}
-// }
+export interface ParamEditorRef {
+  getModel: () => Model;
+}

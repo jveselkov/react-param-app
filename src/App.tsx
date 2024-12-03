@@ -1,7 +1,7 @@
 import { useState, useRef } from "react";
-import { ParamEditor, Model, ParamEditorRef } from "./ParamEditor";
+import { ParamEditor, Model, ParamEditorRef, Param } from "./ParamEditor";
 
-const params = [
+const params: Param[] = [
   {
     id: 1,
     name: "Назначение",
@@ -41,7 +41,7 @@ function App() {
         onChange={setModel}
       />
 
-      <button onClick={handleClick}>click</button>
+      <button onClick={handleClick}>click - log to console</button>
     </>
   );
 }

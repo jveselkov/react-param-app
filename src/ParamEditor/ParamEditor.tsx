@@ -1,16 +1,5 @@
 import { ChangeEvent, useImperativeHandle, forwardRef } from "react";
-import { Param, Model } from "./model";
-
-export interface ParamEditorProps {
-  params: Param[];
-  model: Model;
-
-  onChange: (value: Model) => void;
-}
-
-export interface ParamEditorRef {
-  getModel: () => Model;
-}
+import { Param, ParamEditorRef, ParamEditorProps } from "./model";
 
 export const ParamEditor = forwardRef<ParamEditorRef, ParamEditorProps>(
   ({ params, model, onChange }, ref) => {
