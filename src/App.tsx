@@ -1,5 +1,5 @@
 import { useState, useRef } from "react";
-import { ParamEditor, ParamEditorRef } from "./ParamEditor";
+import { ParamEditor, ParamEditorRef, Model } from "./ParamEditor";
 
 const params = [
   {
