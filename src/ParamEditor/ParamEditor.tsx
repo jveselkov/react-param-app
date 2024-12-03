@@ -1,20 +1,15 @@
-import {
-  ChangeEvent,
-  useImperativeHandle,
-  forwardRef,
-  HTMLInputTypeAttribute,
-} from "react";
-import { Param, ParamEditorRef, ParamEditorProps, ParamType } from "./model";
+import { ChangeEvent, useImperativeHandle, forwardRef } from "react";
+import { Param, ParamEditorRef, ParamEditorProps } from "./model";
 
-function getInputType(type: ParamType = "string"): HTMLInputTypeAttribute {
-  switch (type) {
-    case "number":
-      return "number";
-    case "string":
-    default:
-      return "text";
-  }
-}
+// function getInputType(type: ParamType = "string"): HTMLInputTypeAttribute {
+//   switch (type) {
+//     case "number":
+//       return "number";
+//     case "string":
+//     default:
+//       return "text";
+//   }
+// }
 
 export const ParamEditor = forwardRef<ParamEditorRef, ParamEditorProps>(
   ({ params, model, onChange }, ref) => {
@@ -43,8 +38,7 @@ export const ParamEditor = forwardRef<ParamEditorRef, ParamEditorProps>(
           <div key={`input-param-${index}`}>
             <label>{paramsById[value.paramId].name}</label>
             <input
-              type="text"
-              //type={getInputType(paramsById[value.paramId].type)}
+              //      type={getInputType(paramsById[value.paramId].type)}
               value={value.value}
               onChange={handleChange(index)}
             />
