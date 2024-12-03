@@ -1,7 +1,7 @@
 import { useState, useRef } from "react";
-import { ParamEditor, Model, ParamEditorRef, Param } from "./ParamEditor";
+import { ParamEditor, ParamEditorRef } from "./ParamEditor";
 
-const params: Param[] = [
+const params = [
   {
     id: 1,
     name: "Назначение",
@@ -23,7 +23,7 @@ function App() {
       },
       {
         paramId: 2,
-        value: "макси",
+        value: "метров",
       },
     ],
   });

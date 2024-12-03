@@ -1,3 +1,5 @@
+export type ParamType = "string" | "number";
+
 export interface Param {
   id: number;
   name: string;
